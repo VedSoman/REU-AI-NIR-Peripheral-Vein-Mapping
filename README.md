@@ -15,6 +15,6 @@ AI and NIR-Based Imaging for Real-Time Peripheral Vein Mapping is a research pro
 6. Build a real-time peripheral vein mapping system
 
 # Current Progress
-Literature survey in progress
-Research paper analysis
-Methodology planning
+1. Literature survey in progress
+2. Research paper analysis
+3. Methodology planning
