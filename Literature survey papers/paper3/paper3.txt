@@ -16,7 +16,10 @@ Mobile AI
 Biomedical Imaging
 Vein Visualization
 
-Research Objective : The objective of this research is to develop an AI-based vein visualization system that works using ordinary RGB skin images instead of specialized NIR devices. The motivation is that during situations such as the COVID-19 pandemic, healthcare workers wearing gloves and goggles faced difficulty locating veins manually. The authors aimed to create a lightweight deep learning solution that could run on a smartphone, making vein visualization more accessible and portable.
+Research Objective : The objective of this research is to develop an AI-based vein visualization system that works using ordinary RGB 
+skin images instead of specialized NIR devices. The motivation is that during situations such as the COVID-19 pandemic, healthcare 
+workers wearing gloves and goggles faced difficulty locating veins manually. The authors aimed to create a lightweight deep learning 
+solution that could run on a smartphone, making vein visualization more accessible and portable.
 
 Technical Details :
 RGB Skin Image
@@ -49,14 +52,17 @@ Suitable for real-time deployment
 
 Loss Function: A key innovation is the inclusion of a Feature Loss in addition to conventional pixel-wise loss.
 Why Feature Loss?
-Instead of comparing pixels independently, feature loss helps to preserve Local vein continuity, Vessel structure, Neighborhood relationships.
+Instead of comparing pixels independently, feature loss helps to preserve Local vein continuity, Vessel structure, Neighborhood 
+relationships.
 This results in smoother and more realistic vein visualization.
 
-Model Compression: To enable smartphone deployment, the authors apply: Network structure optimization, Parameter pruning, Post-training quantization.
+Model Compression: To enable smartphone deployment, the authors apply: Network structure optimization, Parameter pruning, Post-training
+quantization.
 These steps reduce: Model size, Memory usage, Computational cost.
 while maintaining acceptable accuracy.
 
-Mobile Deployment : The compressed model is deployed on a smartphone, demonstrating that AI-based vein visualization can be performed on portable devices without requiring powerful hardware.
+Mobile Deployment : The compressed model is deployed on a smartphone, demonstrating that AI-based vein visualization can be performed on 
+portable devices without requiring powerful hardware.
 
 Dataset Used :
 Dataset Type - Private dataset.
@@ -64,7 +70,8 @@ Image Type -  RGB skin images.
 Generalization - The authors report additional testing on: Different skin images and Vein disease cases
 
 Performance Metrics:
-The paper evaluates - Subjective visual quality, Objective image quality indices, Generalization performance, Mobile execution performance.
+The paper evaluates - Subjective visual quality, Objective image quality indices, Generalization performance, Mobile execution 
+performance.
 
 Key Results:
 The proposed VV-Net :- 
@@ -91,4 +98,10 @@ Dataset details are limited in the available manuscript excerpt.
 Lacks detailed clinical validation across diverse patient populations.
 Does not report standardized segmentation metrics such as Dice or IoU in the available text.
 
-Tang et al. (2023) proposed a deep learning-based vein visualization framework using a lightweight convolutional neural network (VV-Net) and demonstrated its deployment on a smartphone. The model utilizes RGB skin images and incorporates a feature loss function to preserve local vein structures while reducing computational complexity through pruning and post-training quantization. The approach enables portable and real-time vein visualization without specialized imaging hardware. However, the method focuses on visualization rather than explicit vein segmentation or mapping and may be more sensitive to lighting and skin color variations because it relies on RGB images. These limitations suggest that combining NIR imaging with AI-based segmentation could provide more robust real-time peripheral vein mapping.
+Tang et al. (2023) proposed a deep learning-based vein visualization framework using a lightweight convolutional neural network (VV-Net)
+and demonstrated its deployment on a smartphone. The model utilizes RGB skin images and incorporates a feature loss function to preserve 
+local vein structures while reducing computational complexity through pruning and post-training quantization. The approach enables 
+portable and real-time vein visualization without specialized imaging hardware. However, the method focuses on visualization rather than 
+explicit vein segmentation or mapping and may be more sensitive to lighting and skin color variations because it relies on RGB images. 
+These limitations suggest that combining NIR imaging with AI-based segmentation could provide more robust real-time peripheral vein 
+mapping.
