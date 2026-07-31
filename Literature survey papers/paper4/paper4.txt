@@ -1,0 +1,118 @@
+Paper 4
+
+Title : Edge AI-Based Vein Detector for Efficient Venipuncture in the Antecubital Fossa
+
+Authors : Edwin Salcedo, Patricia Peñaloza. 
+
+Published : 2023
+
+Conference : MICAI 2023 (Lecture Notes in Computer Science - Springer)
+
+Publisher : Springer
+
+Research Area :
+Biomedical Imaging
+Computer Vision
+Artificial Intelligence
+Edge AI
+NIR Imaging
+Deep Learning
+Medical Device Development
+
+Research Objective : The objective of this paper is to develop an AI-powered portable vein finder that can automatically detect veins in the antecubital fossa (front of the elbow), where venipuncture is commonly performed. 
+The authors specifically targeted patients with poorly visible veins, including: Elderly individuals, Obese patients, People with diabetes, Individuals with dark skin tones, Patients with fluid retention.
+The goal was to reduce repeated needle insertions, pain, and complications by providing accurate real-time vein localization.
+
+Technical Details :
+NIR LED Illumination
+          ↓
+NIR Camera
+          ↓
+NIR Image
+          ↓
+Image Preprocessing
+          ↓
+Modified U-Net
+          ↓
+Vein Segmentation
+          ↓
+Antecubital Fossa Localization
+          ↓
+TensorFlow Lite Quantization
+          ↓
+Edge AI Device (Raspberry Pi)
+          ↓
+Real-Time Vein Detection
+
+
+Imaging Technique :
+The system uses Near-Infrared Imaging (NIR) and NIR light penetrates beneath the skin then Deoxygenated hemoglobin absorbs NIR radiation. Therefore, Veins appear dark and Surrounding tissue appears bright. This produces high-contrast images suitable for AI segmentation.
+
+AI Model :
+The authors developed a Modified U-Net architecture unlike traditional U-Net, their model performs two tasks simultaneously:
+1. Vein Segmentation - Pixel-wise segmentation of veins.
+2. Region Localization - Automatically detects the Antecubital Fossa.
+
+Dataset Annotation :
+Each image contains - Vein segmentation mask, Bounding box, Center coordinates, Arm angle information.
+This allows the model to learn both vessel structure and puncture location.
+
+Model Compression :
+To enable real-time execution on embedded hardware, the model was compressed using TensorFlow Lite quantization. The authors evaluated four quantization methods and selected Dynamic Range Quantization as the best balance between speed and accuracy.
+
+Embedded Hardware :
+The model was tested on four edge computing platforms - Raspberry Pi 4B, Raspberry Pi 3B+, NVIDIA Jetson Nano, Khadas VIM3.
+Among these, Raspberry Pi 4B delivered the best trade-off between latency and accuracy.
+
+Dataset Used :
+Dataset Type - Private NIR Dataset.
+Number of Images - 2,016 NIR images.
+Number of Subjects - 1,008 participants.
+Image Type - Near Infrared Images.
+Target Region - Antecubital Fossa.
+
+Annotation - 
+Each image includes: Segmentation mask, Bounding box, Centroid, Arm angle.
+
+Performance Metrics :
+The authors evaluated - 
+IoU (Intersection over Union)
+FPS (Frames Per Second)
+Inference Latency
+Model Size
+Quantization Performance
+
+Best Results : 
+IoU ≈ 0.957
+Speed ≈ 5.14 FPS
+using a quantized model on a Raspberry Pi 4B.
+
+Key Results :
+The proposed system - 
+Achieved excellent segmentation accuracy.
+Successfully localized the antecubital region.
+Worked in real time on low-cost hardware.
+Balanced speed and accuracy using quantization.
+Demonstrated that Edge AI can support portable vein mapping devices.
+
+Advantages :
+Large dataset (2,016 images)
+1,008 subjects
+NIR imaging
+Modified U-Net
+Automatic segmentation
+Automatic localization
+Edge AI deployment
+TensorFlow Lite optimization
+Real-time inference
+Raspberry Pi implementation
+Practical clinical focus
+
+Limitations :
+Limited to the antecubital fossa; other peripheral vein locations are not addressed.
+Uses a private dataset, making direct comparison and reproducibility more difficult.
+Performance is around 5 FPS, which may be limiting for some real-time applications.
+Focuses on NIR imaging only; no multimodal fusion with ultrasound or RGB.
+Clinical validation in routine hospital workflows is limited.
+
+Salcedo and Peñaloza (2023) proposed an Edge AI-based vein detector that combines near-infrared imaging with a modified U-Net architecture for automated vein segmentation and antecubital fossa localization. The study introduced a private dataset containing 2,016 annotated NIR images from 1,008 participants and optimized the model for embedded deployment using TensorFlow Lite quantization. The quantized model achieved an IoU of approximately 0.957 while running at about 5.14 FPS on a Raspberry Pi 4B, demonstrating the feasibility of portable, real-time vein detection. However, the approach is limited to the antecubital region and relies on a private dataset, highlighting the need for more generalized AI-based peripheral vein mapping systems.

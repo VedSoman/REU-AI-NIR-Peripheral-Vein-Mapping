@@ -1,0 +1,83 @@
+Paper 2
+
+Title: Competitive Real-Time Near Infrared (NIR) Vein Finder Imaging Device to Improve Peripheral Subcutaneous Vein Selection in Venipuncture for Clinical Laboratory Testing.
+
+Authors:
+Mark D. Francisco
+Wen-Fan Chen
+Cheng-Tang Pan
+Ming-Cheng Lin
+Zhi-Hong Wen
+Chien-Feng Liao
+Yow-Ling Shiue
+
+Published Year: 2021
+
+Journal: Micromachines
+
+Publisher: MDPI
+
+Research Objective: The primary objective of this paper is to design and evaluate a low-cost, portable, real-time NIR vein finder that improves peripheral vein visualization during venipuncture. The authors aimed to overcome limitations of commercial vein finders by developing a device that is Affordable, Portable, Easy to use, Suitable for hospitals and educational training.
+
+Technical Details:
+Imaging Principle - The system is based on Near-Infrared (NIR) Reflectance Imaging.
+
+Principle - 960 nm NIR LEDs illuminate the skin and Deoxygenated hemoglobin absorbs NIR light then Surrounding tissues reflect more light so the captured image shows veins as dark structures against brighter tissue. This provides clear visualization of superficial peripheral veins without using ionizing radiation.
+
+Hardware Components:
+The device includes three 960 nm NIR LEDs, CMOS Infrared Camera (1920 × 1080 resolution), IR optical filter, Portable housing, Open-source image processing software.
+
+Image Processing Workflow :
+NIR LED Illumination
+        ↓
+Skin Reflectance
+        ↓
+CMOS IR Camera
+        ↓
+Image Acquisition
+        ↓
+Image Enhancement
+        ↓
+Real-Time Display
+        ↓
+Vein Visualization
+
+Clinical Evaluation: 
+A major strength of this paper is its evaluation on real human subjects rather than only laboratory images. The authors assessed vein visibility on Arm and Dorsal hand. They also investigated the effect of Gender, Age, Body Mass Index (BMI), Skin tone, Arm circumference.
+
+Dataset Used:
+Dataset Type - Private clinical dataset.
+Number of Subjects - 242 human participants.
+Imaging Regions - Forearm, Dorsal hand, Image Acquisition.
+Images were captured using the custom NIR imaging device developed by the authors.
+
+Performance Metrics: The study mainly reports clinical imaging performance rather than AI segmentation metrics.
+Evaluation includes - Vein visibility, Clinical usability, Image quality, Device effectiveness across patient groups.
+
+Key findings - 100% visibility of vein patterns on the dorsal hand and only 14 of 242 participants (5.79%) had non-visible peripheral veins in the arm region.
+
+Key Results:
+Successfully visualized superficial veins in real time.
+Achieved excellent dorsal hand vein visibility.
+Performed well across different skin tones and BMI categories.
+Offered a much lower-cost alternative to commercial vein finders.
+
+Advantages:
+Low-cost device
+Portable
+Real-time imaging
+High-resolution CMOS camera
+242-subject clinical evaluation
+Works across multiple patient characteristics
+Safe, non-invasive NIR imaging
+
+Limitations:
+No Artificial Intelligence
+No deep learning model
+No automatic vein segmentation
+No vein classification
+Limited to superficial peripheral veins
+Performance under challenging lighting conditions is not extensively evaluated
+
+
+Francisco et al. (2021) developed a portable real-time near-infrared (NIR) vein finder to improve peripheral subcutaneous vein selection during venipuncture. The system employed 960 nm NIR LEDs, a high-resolution CMOS infrared camera, and image enhancement techniques to visualize superficial veins without the need for a tourniquet. Clinical evaluation on 242 participants demonstrated excellent vein visibility, including complete visibility of dorsal hand veins, while accommodating variations in age, BMI, skin tone, and arm circumference. However, the system relies on manual interpretation of enhanced images and does not employ artificial intelligence for automated vein segmentation or mapping. These limitations motivate the integration of AI techniques for accurate and real-time peripheral vein detection.
