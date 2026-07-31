@@ -13,17 +13,22 @@ Journal: Indonesian Journal of Electrical Engineering and Computer Science (IJEE
 Publisher: Institute of Advanced Engineering and Science (IAES)
 
 Research Objective:
-The paper aims to develop a low-cost real-time vein detection system that assists nurses and clinicians in locating peripheral veins during venipuncture.
-The motivation comes from the high failure rate of first-attempt needle insertion especially in obese patients, elderly patients, infants, patients with difficult veins because repeated needle insertion increases patient pain, bruising, treatment delay, infection risk.
+The paper aims to develop a low-cost real-time vein detection system that assists nurses and clinicians in locating peripheral veins 
+during venipuncture.
+The motivation comes from the high failure rate of first-attempt needle insertion especially in obese patients, elderly patients,
+infants, patients with difficult veins because repeated needle insertion increases patient pain, bruising, treatment delay, infection 
+risk.
 Therefore, the authors proposed an NIR-based imaging system that enhances vein visibility in real time.
 
 Technical Details:
 Imaging Technique - The system uses Near Infrared (NIR) Imaging.
 
-Principle - Human blood contains deoxygenated hemoglobin. Deoxygenated hemoglobin absorbs Near Infrared light much more than surrounding skin tissues.
+Principle - Human blood contains deoxygenated hemoglobin. Deoxygenated hemoglobin absorbs Near Infrared light much more than surrounding
+skin tissues.
 When NIR light illuminates the skin then skin reflects most light and veins absorb the light.
 Therefore, Veins appear dark and Skin appears bright which will help to making veins easier to detect.
-The paper states that NIR wavelengths around 740–940 nm can penetrate approximately 5 mm beneath the skin surface, enabling visualization of superficial veins.
+The paper states that NIR wavelengths around 740–940 nm can penetrate approximately 5 mm beneath the skin surface, enabling visualization
+of superficial veins.
 
 Hardware Used - The proposed system consists of Near Infrared LEDs, Night Vision Camera, Computer, MATLAB software.
 
@@ -49,7 +54,8 @@ Real-time Vein Display
 
 Image Enhancement:
 The authors applied- 
-CLAHE for improve contrast, enhance dark veins, avoid over-enhancement, preserve local vessel details. CLAHE divides the image into small regions and enhances each region independently.
+CLAHE for improve contrast, enhance dark veins, avoid over-enhancement, preserve local vessel details. CLAHE divides the image into small
+regions and enhances each region independently.
  
 Programming Environment: MATLAB
 The algorithm was implemented entirely in MATLAB for real-time processing.
@@ -57,7 +63,8 @@ The algorithm was implemented entirely in MATLAB for real-time processing.
 Dataset Used:
 Dataset Type- Private Dataset
 Imaging Device - Night Vision Camera, NIR LEDs, Subjects.
-The paper demonstrates images acquired from human hands but does not clearly specify total number of participants, train/test split and annotation procedure.
+The paper demonstrates images acquired from human hands but does not clearly specify total number of participants, train/test split and 
+annotation procedure.
 
 Performance Metrics:
 Unlike modern AI papers, this work mainly provides qualitative evaluation.
@@ -65,8 +72,10 @@ Reported aspects include: Real-time performance, Visual clarity of veins, Vein e
 It does not report modern segmentation metrics such as: Dice Score, IoU, Precision, Recall, F1 Score.
 
 Key Results:
-The proposed system successfully enhances superficial veins, works in real time, improves visibility using CLAHE, provides a low-cost solution, assists clinicians during venipuncture.
-The authors also suggest potential applications such as identifying bleeding spots and clots, though these were not clinically validated in the study.
+The proposed system successfully enhances superficial veins, works in real time, improves visibility using CLAHE, provides a low-cost 
+solution, assists clinicians during venipuncture.
+The authors also suggest potential applications such as identifying bleeding spots and clots, though these were not clinically validated 
+in the study.
 
 Advantages:
 Low-cost implementation
@@ -89,7 +98,6 @@ No clinical validation on diverse patient populations
 Limited robustness analysis across different skin tones and lighting conditions
 Limited image enhancement compared with modern methods
 
-
 Ahmed et al. (2018) presented a real-time peripheral vein detection system based on near-infrared (NIR) imaging and Contrast Limited  
 Adaptive Histogram Equalization (CLAHE). The system employs NIR illumination and a night vision camera to enhance superficial vein 
 visibility in real time using MATLAB. The approach provides a simple, low-cost, and non-invasive solution for assisting clinicians during
@@ -97,4 +105,3 @@ venipuncture. However, the method relies on conventional image processing and do
 learning for automated vein segmentation. Additionally, the absence of standardized datasets and quantitative performance metrics limits
 its clinical validation. These limitations motivate the development of AI-assisted real-time peripheral vein mapping systems capable of
 achieving higher robustness and automation.
-
