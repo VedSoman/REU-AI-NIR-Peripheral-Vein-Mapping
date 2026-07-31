@@ -90,4 +90,11 @@ Limited robustness analysis across different skin tones and lighting conditions
 Limited image enhancement compared with modern methods
 
 
-Ahmed et al. (2018) presented a real-time peripheral vein detection system based on near-infrared (NIR) imaging and Contrast Limited Adaptive Histogram Equalization (CLAHE). The system employs NIR illumination and a night vision camera to enhance superficial vein visibility in real time using MATLAB. The approach provides a simple, low-cost, and non-invasive solution for assisting clinicians during venipuncture. However, the method relies on conventional image processing and does not incorporate artificial intelligence or deep learning for automated vein segmentation. Additionally, the absence of standardized datasets and quantitative performance metrics limits its clinical validation. These limitations motivate the development of AI-assisted real-time peripheral vein mapping systems capable of achieving higher robustness and automation.
+Ahmed et al. (2018) presented a real-time peripheral vein detection system based on near-infrared (NIR) imaging and Contrast Limited  
+Adaptive Histogram Equalization (CLAHE). The system employs NIR illumination and a night vision camera to enhance superficial vein 
+visibility in real time using MATLAB. The approach provides a simple, low-cost, and non-invasive solution for assisting clinicians during
+venipuncture. However, the method relies on conventional image processing and does not incorporate artificial intelligence or deep
+learning for automated vein segmentation. Additionally, the absence of standardized datasets and quantitative performance metrics limits
+its clinical validation. These limitations motivate the development of AI-assisted real-time peripheral vein mapping systems capable of
+achieving higher robustness and automation.
+
