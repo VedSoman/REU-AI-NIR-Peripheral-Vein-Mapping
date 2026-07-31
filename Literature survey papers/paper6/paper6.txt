@@ -1,0 +1,105 @@
+Paper 6
+
+Title : ViG3D-UNet: Volumetric Vascular Connectivity-Aware Segmentation via 3D Vision Graph Representation
+
+Authors : Bowen Liu, Chunlei Meng, Wei Lin, Hongda Zhang, Ziqing Zhou, Zhongxue Gan, Chun Ouyang.
+
+Published : 2025 (arXiv Preprint)
+
+Research Area :
+Medical Image Segmentation
+Graph Neural Networks
+Deep Learning
+3D Computer Vision
+Coronary Vessel Segmentation
+Biomedical Imaging
+
+Research Objective : The main objective is to improve 3D coronary artery segmentation from CT angiography by preserving the connectivity of blood vessels.
+Traditional segmentation methods often:-
+1. Miss thin vessel branches
+2. Produce broken vessel segments
+3. Fail at vessel bifurcations
+The authors propose a graph-based deep learning framework to overcome these problems and generate continuous vascular networks.
+
+Technical Details :
+Overall Workflow -
+CT Angiography Volume
+          ↓
+3D Preprocessing
+          ↓
+ViG3D Module (Graph Neural Network)
+          ↓
+3D CNN Branch
+          ↓
+Channel Attention Fusion
+          ↓
+Offset Decoder
+          ↓
+Continuous Vessel Segmentation
+
+Imaging Technique : The study uses Computed Tomography Angiography (CTA).
+CTA provides:
+1. High-resolution 3D images
+2. Detailed coronary artery anatomy
+3. Visualization of small vascular branches
+
+AI Architecture : 
+The proposed ViG3D-UNet has three major components:-
+1. ViG3D (Vision Graph Module) - 
+Instead of treating the image as independent pixels, the model converts the vascular structure into a graph. Each graph node represents a local image region. Edges represent relationships between neighboring vessel regions.
+This allows the model to understand vessel topology rather than only pixel intensity.
+
+2. 3D CNN Branch :- Runs parallel to the graph module.
+Extracts:
+a. Texture
+b. Intensity
+c. Local vessel appearance
+while the graph branch learns connectivity.
+
+3. Channel Attention Fusion:- The outputs of both branches are combined using channel attention.
+Benefits:
+a. Better feature selection
+b. Reduced noise
+c. Improved representation of thin vessels
+
+4. Offset Decoder:- Instead of a conventional decoder, the authors propose an offset decoder that restores spatial resolution while minimizing redundant computations.
+Its goal is to maintain:
+a. Vessel continuity
+b. Thin branches
+c. Accurate boundaries
+
+Dataset Used : Public Datasets
+1. The model was evaluated on: ASOCA Dataset (Coronary CT Angiography dataset)
+2. ImageCAS Dataset : Public coronary artery segmentation dataset.
+Both datasets provide manually annotated vessel masks for training and testing.
+
+Performance Metrics :
+The authors evaluate - Dice Score, Connectivity preservation, Vessel continuity,Segmentation accuracy.
+The emphasis is not only on pixel overlap but also on preserving complete vascular trees.
+
+Key Results :
+The proposed ViG3D-UNet:- 
+a. Outperformed conventional CNN-based methods.
+b. Better preserved vessel continuity.
+c. Reduced broken vessel branches.
+d. Improved detection of small distal vessels.
+e. Demonstrated the benefit of combining graph reasoning with convolutional features.
+
+Advantages :
+Novel Graph Neural Network approach
+Better vessel connectivity
+Accurate thin vessel segmentation
+3D spatial understanding
+Attention mechanism
+Uses public datasets
+Improved continuity of vascular trees
+Addresses common segmentation failures
+
+8. Limitations :
+Designed specifically for 3D CTA coronary images, not NIR peripheral veins.
+Computationally intensive due to graph operations and 3D processing.
+Requires high-performance hardware.
+Not suitable for lightweight edge devices without further optimization.
+Presented as a preprint and may require further peer-reviewed validation.
+
+Liu et al. (2025) proposed ViG3D-UNet, a graph-enhanced deep learning framework for coronary artery segmentation from CT angiography. The architecture integrates a 3D Vision Graph module with a parallel 3D convolutional branch and channel attention to preserve vascular connectivity while improving segmentation accuracy. Evaluations on the public ASOCA and ImageCAS datasets demonstrated superior continuity of vascular trees and improved detection of thin vessel branches compared with conventional CNN-based methods. However, the framework targets 3D coronary CTA images and has high computational requirements, making it unsuitable for real-time NIR-based peripheral vein mapping without significant optimization.
