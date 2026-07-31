@@ -14,7 +14,8 @@ Deep Learning
 Coronary Vessel Segmentation
 Biomedical Imaging
 
-Research Objective : The main objective is to improve 3D coronary artery segmentation from CT angiography by preserving the connectivity of blood vessels.
+Research Objective : The main objective is to improve 3D coronary artery segmentation from CT angiography by preserving the connectivity
+of blood vessels.
 Traditional segmentation methods often:-
 1. Miss thin vessel branches
 2. Produce broken vessel segments
@@ -46,7 +47,8 @@ CTA provides:
 AI Architecture : 
 The proposed ViG3D-UNet has three major components:-
 1. ViG3D (Vision Graph Module) - 
-Instead of treating the image as independent pixels, the model converts the vascular structure into a graph. Each graph node represents a local image region. Edges represent relationships between neighboring vessel regions.
+Instead of treating the image as independent pixels, the model converts the vascular structure into a graph. Each graph node represents a
+local image region. Edges represent relationships between neighboring vessel regions.
 This allows the model to understand vessel topology rather than only pixel intensity.
 
 2. 3D CNN Branch :- Runs parallel to the graph module.
@@ -62,7 +64,8 @@ a. Better feature selection
 b. Reduced noise
 c. Improved representation of thin vessels
 
-4. Offset Decoder:- Instead of a conventional decoder, the authors propose an offset decoder that restores spatial resolution while minimizing redundant computations.
+4. Offset Decoder:- Instead of a conventional decoder, the authors propose an offset decoder that restores spatial resolution while 
+minimizing redundant computations.
 Its goal is to maintain:
 a. Vessel continuity
 b. Thin branches
@@ -102,4 +105,9 @@ Requires high-performance hardware.
 Not suitable for lightweight edge devices without further optimization.
 Presented as a preprint and may require further peer-reviewed validation.
 
-Liu et al. (2025) proposed ViG3D-UNet, a graph-enhanced deep learning framework for coronary artery segmentation from CT angiography. The architecture integrates a 3D Vision Graph module with a parallel 3D convolutional branch and channel attention to preserve vascular connectivity while improving segmentation accuracy. Evaluations on the public ASOCA and ImageCAS datasets demonstrated superior continuity of vascular trees and improved detection of thin vessel branches compared with conventional CNN-based methods. However, the framework targets 3D coronary CTA images and has high computational requirements, making it unsuitable for real-time NIR-based peripheral vein mapping without significant optimization.
+Liu et al. (2025) proposed ViG3D-UNet, a graph-enhanced deep learning framework for coronary artery segmentation from CT angiography. The
+architecture integrates a 3D Vision Graph module with a parallel 3D convolutional branch and channel attention to preserve vascular 
+connectivity while improving segmentation accuracy. Evaluations on the public ASOCA and ImageCAS datasets demonstrated superior 
+continuity of vascular trees and improved detection of thin vessel branches compared with conventional CNN-based methods. However, the 
+framework targets 3D coronary CTA images and has high computational requirements, making it unsuitable for real-time NIR-based peripheral 
+vein mapping without significant optimization.
