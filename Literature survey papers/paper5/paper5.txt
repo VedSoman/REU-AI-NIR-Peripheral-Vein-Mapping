@@ -11,8 +11,11 @@ Journal : Biomedical Signal Processing and Control
 Publisher : Elsevier
 
 Research Objective :
-The goal of this paper is to develop an AI-based hepatic vein segmentation system that accurately extracts liver blood vessels from CT images for clinical applications such as Liver surgery planning, Tumor localization, Liver transplantation, Ablation therapy, Clinical diagnosis.
-The authors emphasize that accurate vessel segmentation is essential because liver vessels have complex branching structures and vary considerably across patients.
+The goal of this paper is to develop an AI-based hepatic vein segmentation system that accurately extracts liver blood vessels from CT 
+images for clinical applications such as Liver surgery planning, Tumor localization, Liver transplantation, Ablation therapy, Clinical 
+diagnosis.
+The authors emphasize that accurate vessel segmentation is essential because liver vessels have complex branching structures and vary 
+considerably across patients.
 
 Technical Details :
 CT Scan
@@ -30,7 +33,8 @@ AI Segmentation
 Clinical Evaluation
 
 Imaging Technique :
-This work uses: Contrast-enhanced Computed Tomography (CT) instead of Near Infrared imaging. The CT scans provide detailed three-dimensional anatomical information, making them suitable for segmenting hepatic vessels.
+This work uses: Contrast-enhanced Computed Tomography (CT) instead of Near Infrared imaging. The CT scans provide detailed three-
+dimensional anatomical information, making them suitable for segmenting hepatic vessels.
 
 Image Preprocessing : 
 The authors evaluate -
@@ -51,7 +55,8 @@ Features:- Residual blocks, Easier training of deeper networks, Improved converg
 After comparison, Dense U-Net combined with preprocessing filters produced the best performance.
 
 Clinical Evaluation :
-Unlike many segmentation studies, the authors did not rely only on Dice scores. They also performed clinical assessment, checking whether important vessel branches required by surgeons were correctly identified.
+Unlike many segmentation studies, the authors did not rely only on Dice scores. They also performed clinical assessment, checking whether
+important vessel branches required by surgeons were correctly identified.
 
 Dataset Used :
 Dataset Type - Combination of:- Public CT datasets, Proprietary (hospital) CT datasets.
@@ -89,4 +94,9 @@ Segmentation quality decreases for very small or complex vessels.
 Some predictions extend beyond true vessel boundaries.
 Computational requirements are higher than lightweight edge-AI systems.
 
-Jenssen et al. (2025) investigated AI-based hepatic venous vessel segmentation using Dense U-Net and Residual U-Net architectures combined with smoothing and vesselness preprocessing filters. The proposed Dense U-Net achieved Dice scores of 0.8144 on an internal dataset and 0.7859 on a public dataset while correctly identifying clinically important vessel structures in approximately 85% of cases. The study demonstrates that preprocessing significantly improves segmentation quality. However, the framework is designed for CT-based hepatic imaging rather than real-time NIR peripheral vein mapping, highlighting the need for lightweight AI models tailored to portable clinical applications. 
+Jenssen et al. (2025) investigated AI-based hepatic venous vessel segmentation using Dense U-Net and Residual U-Net architectures 
+combined with smoothing and vesselness preprocessing filters. The proposed Dense U-Net achieved Dice scores of 0.8144 on an internal 
+dataset and 0.7859 on a public dataset while correctly identifying clinically important vessel structures in approximately 85% of cases. 
+The study demonstrates that preprocessing significantly improves segmentation quality. However, the framework is designed for CT-based 
+hepatic imaging rather than real-time NIR peripheral vein mapping, highlighting the need for lightweight AI models tailored to portable 
+clinical applications. 
